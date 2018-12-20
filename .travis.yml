@@ -7,9 +7,9 @@ matrix:
     - language: python
       python: 2.7.10
       before_script:
-        - pip install --user awscli
-      script:
         - python -V
+      script:
+        - pip install awscli
 
 node_js:
   - "9"
