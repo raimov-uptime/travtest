@@ -23,3 +23,5 @@ branches:
 install:
   - yarn install
   - export PATH=$PATH:$HOME/.local/bin
+
+script: . test.sh
