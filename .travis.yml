@@ -1,0 +1,25 @@
+sudo: required
+
+language: node_js
+
+matrix:
+  include:
+    - language: python
+      python: 2.7.10
+      before_script:
+        - pip install --user awscli
+      script:
+        - python -V
+
+node_js:
+  - "9"
+
+branches:
+  only:
+    - develop
+    - master
+    - "pre-release"
+
+install:
+  - yarn install
+  - export PATH=$PATH:$HOME/.local/bin
