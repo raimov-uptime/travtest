@@ -6,10 +6,6 @@ matrix:
   include:
     - language: python
       python: 2.7.10
-      before_script:
-        - python -V
-      script:
-        - pip install awscli
 
 node_js:
   - "9"
@@ -19,9 +15,5 @@ branches:
     - develop
     - master
     - "pre-release"
-
-install:
-  - yarn install
-  - export PATH=$PATH:$HOME/.local/bin
 
 script: . test.sh
